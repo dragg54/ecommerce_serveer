@@ -5,7 +5,8 @@ exports.create=(req,res)=>{
         name:req.body.name,
         description:req.body.description,
         category: req.body.category,
-        price: req.body.price
+        price: req.body.price,
+        itemImage: req.file.path
     })
     items
     .save(items)

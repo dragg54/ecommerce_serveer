@@ -4,6 +4,16 @@
         <title>Home page</title>
     </head>
     <body>
-        <h1>Welcome to user's log in page</h1>
+        <form action="/api/items" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name"/><br>
+            <label for="description">Description:</label>
+            <input type="text" name="description"><br>
+            <label for="category">Category:</label>
+            <input type="text" name="category"/><br>
+            <label for="price">Price:</label>
+            <input type="text" name="price">
+            <input type="submit">
+        </form>
     </body>
 </html>

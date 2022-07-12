@@ -16,7 +16,10 @@ const itemSchema = new mongoose.Schema({
     price:{
         type:Number,
         required: true
-    }
+    },
+   itemImage:{
+        type:String
+    } 
 })
 
 const Item = mongoose.model("items", itemSchema)
