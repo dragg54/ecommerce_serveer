@@ -13,5 +13,6 @@ const PORT = process.env.PORT
 app.use("/assets", express.static(__dirname + "/assets"))
 app.use("/media", express.static("media"))
 app.use("/", require("./routes/routes") )
+app.use("/items", require("./routes/routes"))
 console.log("listening to port 3000")
 app.listen(3000)
