@@ -1,10 +1,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="../assets/style/styles.css" type="text/css">
-        <title>Home page</title>
+        <title></title>
     </head>
     <body>
-        <form action="/api/items" method="post">
+        <form action="/api/items" method="POST" enctype="multipart/form-data">
             <label for="name">Name</label>
             <input type="text" name="name"/><br>
             <label for="description">Description:</label>
@@ -12,7 +12,8 @@
             <label for="category">Category:</label>
             <input type="text" name="category"/><br>
             <label for="price">Price:</label>
-            <input type="text" name="price">
+            <input type="text" name="price"><br>
+            <input type="file" name="itemImage"><br>
             <input type="submit">
         </form>
     </body>
