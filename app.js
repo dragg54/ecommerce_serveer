@@ -6,6 +6,11 @@ const connectDb = require("./database/connection")
 
 connectDb()
 const app = express()
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+  
 app.set("view engine", "ejs")
 app.use(bodyparser.urlencoded({extended: true}))
 dotenv.config({path:"config.env"})
