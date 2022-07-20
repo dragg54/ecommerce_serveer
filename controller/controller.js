@@ -21,8 +21,8 @@ exports.create=(req,res)=>{
 }
 
 exports.find = (req, res)=>{
-    if(req.params.id){
-        const id = req.params.id
+    if(req.query.id){
+        const id = req.query.id
         Item.findById(id)
         .then(response=>{
             res.send(response)
