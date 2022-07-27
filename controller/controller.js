@@ -21,7 +21,19 @@ exports.create=(req,res)=>{
 }
 
 exports.find = (req, res)=>{
-    if(req.query.id){
+    if(req.query.category){
+        const category = req.query.category
+        Item.find({category: category})
+        .then(response=>{
+            console.log(category)
+            res.send(response)
+        })
+        .catch(err=>{
+            res.status(500).send(err)
+        })
+    }
+
+    else if(req.query.id){
         const id = req.query.id
         Item.findById(id)
         .then(response=>{
@@ -31,6 +43,7 @@ exports.find = (req, res)=>{
             res.status(500).send(err)
         })
     }
+
     else{
         Item.find()
         .then(response=>{
