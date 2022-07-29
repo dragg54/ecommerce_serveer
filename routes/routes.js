@@ -18,5 +18,4 @@ route.get("/items", services.allItemRoutes)
 route.post("/api/items", upload.single("itemImage"), controller.create)
 route.get("/api/items", controller.find)
 route.get("/api/items/:id", controller.find)
-route.get("/api/items/:category", controller.find)
 module.exports = route

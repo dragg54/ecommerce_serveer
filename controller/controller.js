@@ -21,7 +21,6 @@ exports.create=(req,res)=>{
 }
 
 exports.find = (req, res)=>{
-
     if(req.query.id){
         const id = req.query.id
         Item.findById(id)
